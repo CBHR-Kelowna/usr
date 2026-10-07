@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Confirm your entry | Coldwell Banker Horizon Realty</title>
+<!--
+Design reference only.
+Recipient identity is resolved from the signed campaign link.
+No name or email form fields are required.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#F6F8FB;color:#263142}
+body{font-family:Roboto,Arial,sans-serif}
+.top{height:6px;background:#012169}
+.wrap{max-width:760px;margin:0 auto;padding:56px 24px 80px}
+.brand{display:flex;align-items:center;justify-content:space-between;padding-bottom:28px;border-bottom:1px solid #D8DFEA}
+.brand img{width:232px;height:auto}
+.tag{font-size:11px;font-weight:600;letter-spacing:.12em;color:#687386}
+.panel{background:#fff;margin-top:34px;border:1px solid #E8EDF4;border-radius:14px;overflow:hidden}
+.main{padding:52px 56px 44px}
+.kicker{font-size:11px;font-weight:600;letter-spacing:.12em;color:#687386}
+h1{font-family:Montserrat,Arial,sans-serif;font-size:42px;line-height:44px;letter-spacing:-.045em;color:#10151F;margin:12px 0 0}
+p{font-size:16px;line-height:27px;margin:20px 0 0}
+.prize{display:grid;grid-template-columns:115px 1fr;gap:24px;align-items:center;margin:34px 0 0;padding:26px 28px;background:#F8F6F1;border-left:3px solid #B8A46A}
+.amount{font-family:'Playfair Display',Georgia,serif;font-size:48px;line-height:48px;color:#012169}
+.prize-title{font-family:Montserrat,Arial,sans-serif;font-size:18px;font-weight:700;letter-spacing:-.02em;color:#10151F}
+.prize-copy{font-size:13px;line-height:21px;color:#687386;margin-top:6px}
+.confirm{margin-top:36px}
+button{border:0;border-radius:9px;background:#012169;color:#fff;padding:15px 24px;font:600 14px/18px Roboto,Arial,sans-serif;cursor:pointer}
+button:hover{background:#001844}
+.note{font-size:12px;line-height:19px;color:#8A94A6;margin-top:14px}
+.success{display:none;padding:52px 56px}
+.success h2{font-family:Montserrat,Arial,sans-serif;font-size:34px;line-height:38px;letter-spacing:-.04em;color:#10151F;margin:12px 0 0}
+.check{width:40px;height:40px;border-radius:50%;background:#E9EEF8;color:#012169;display:grid;place-items:center;font-weight:700;font-size:18px}
+.footer{padding:25px 56px;background:#001844;color:#fff}
+.footer strong{font-size:11px;letter-spacing:.04em}
+.footer div{font-size:10px;line-height:17px;color:#C8D2E3;margin-top:4px}
+@media(max-width:640px){
+.wrap{padding:36px 16px 60px}
+.brand{align-items:flex-start;gap:18px}
+.brand img{width:190px}
+.tag{text-align:right;font-size:9px}
+.main,.success{padding:38px 26px}
+h1{font-size:34px;line-height:37px}
+.prize{grid-template-columns:1fr;gap:10px}
+.footer{padding:24px 26px}
+}
+</style>
+</head>
+<body>
+<div class="top"></div>
+<div class="wrap">
+
+<div class="brand">
+<img src="https://cdn.prod.website-files.com/651d8cc426674e7695b3aaf4/6602f2a3a78342785fa17c84_Logo_600751_Horizon_Realty_HZ_STK_BLU_RGB_FR.png" alt="Coldwell Banker Horizon Realty">
+<div class="tag">CLIENT GIVEAWAY</div>
+</div>
+
+<div class="panel">
+
+<section class="main" id="entryForm">
+<div class="kicker">{{campaign.monthLabel}} CLIENT DRAW</div>
+<h1>Confirm your entry.</h1>
+
+<p>Hi {{client.firstName}}. Once you've finished the review steps from your email, confirm your entry below. That's all we need.</p>
+
+<div class="prize">
+<div class="amount">$100</div>
+<div>
+<div class="prize-title">Take it, or give it.</div>
+<div class="prize-copy">If your name is drawn, choose a $100 Visa gift card or a $100 donation to one of our featured local organizations.</div>
+</div>
+</div>
+
+<div class="confirm">
+<button type="button" onclick="confirmEntry()">Confirm my entry</button>
+<div class="note">Your name and email are already attached to this invitation. You do not need to fill anything out.</div>
+</div>
+</section>
+
+<section class="success" id="successState">
+<div class="check">✓</div>
+<div class="kicker" style="margin-top:24px;">ENTRY CONFIRMED</div>
+<h2>You're in.</h2>
+<p>Your entry for the {{campaign.monthLabel}} client draw has been confirmed. We'll contact the selected client directly.</p>
+<p style="font-size:13px;color:#687386;">If selected, you'll be able to choose between the $100 Visa gift card and the available donation options.</p>
+</section>
+
+<footer class="footer">
+<strong>COLDWELL BANKER HORIZON REALTY</strong>
+<div>1470 Harvey Ave #14, Kelowna, BC V1Y 9K8 · (250) 860-7500</div>
+<div>kelownarealestate.com</div>
+</footer>
+
+</div>
+</div>
+
+<script>
+function confirmEntry(){
+  document.getElementById('entryForm').style.display='none';
+  document.getElementById('successState').style.display='block';
+}
+</script>
+</body>
+</html>
