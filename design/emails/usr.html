@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How did we do?</title>
+<!--
+Design reference only.
+Preferred subject: How did we do, {{client.firstName}}?
+Buyer example:
+  transaction.closedPhrase = "your purchase has closed"
+  transaction.noun = "purchase"
+  survey.label = "BUYER EXPERIENCE"
+Seller example:
+  transaction.closedPhrase = "your sale has closed"
+  transaction.noun = "sale"
+  survey.label = "SELLER EXPERIENCE"
+service.displayName may be one agent, two agents, or a team name.
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500;600&display=swap');
+html,body{margin:0;padding:0;background:#F6F8FB}
+body{font-family:Roboto,Arial,Helvetica,sans-serif;color:#263142;-webkit-font-smoothing:antialiased}
+table{border-collapse:collapse;border-spacing:0}
+img{border:0;display:block}
+a{text-decoration:none}
+.shell{width:620px;max-width:620px;background:#FFFFFF}
+.pad{padding-left:48px;padding-right:48px}
+.kicker{font-size:10px;line-height:14px;font-weight:600;letter-spacing:.12em;color:#687386}
+.h1{font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:38px;line-height:40px;font-weight:700;letter-spacing:-.045em;color:#10151F}
+.body{font-size:15px;line-height:25px;color:#263142}
+.panel-label{font-size:10px;line-height:14px;font-weight:600;letter-spacing:.12em;color:#8A94A6}
+.panel-title{font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:18px;line-height:23px;font-weight:700;letter-spacing:-.02em;color:#10151F}
+.panel-copy{font-size:13px;line-height:21px;color:#687386}
+.button{display:inline-block;padding:14px 22px;border-radius:8px;background:#012169;color:#FFFFFF!important;font-size:13px;line-height:17px;font-weight:600}
+.fine{font-size:11px;line-height:18px;color:#8A94A6}
+@media(max-width:660px){
+.shell{width:100%!important}
+.pad{padding-left:26px!important;padding-right:26px!important}
+.h1{font-size:32px!important;line-height:35px!important}
+}
+</style>
+</head>
+<body>
+<div style="display:none;max-height:0;overflow:hidden;color:transparent;">
+We'd appreciate a few minutes of your time to tell us how we did.
+</div>
+
+<table role="presentation" width="100%" bgcolor="#F6F8FB">
+<tr><td align="center" style="padding:32px 12px;">
+<table role="presentation" class="shell" width="620">
+
+<tr>
+<td bgcolor="#012169" class="pad" style="padding-top:23px;padding-bottom:23px;">
+<table role="presentation" width="100%">
+<tr>
+<td valign="middle">
+<img src="https://cdn.prod.website-files.com/651d8cc426674e7695b3aaf4/651d8cc426674e7695b3ab6a_Logo_600751_Horizon_Realty_HZ_STK_W_MO.webp" width="210" alt="Coldwell Banker Horizon Realty" style="width:210px;max-width:100%;height:auto;">
+</td>
+<td align="right" valign="middle" style="font-size:10px;line-height:14px;font-weight:600;letter-spacing:.12em;color:#DDE5F2;">ULTIMATE SERVICE®</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td height="3" bgcolor="#B8A46A"></td></tr>
+
+<tr>
+<td class="pad" style="padding-top:44px;padding-bottom:30px;">
+<div class="kicker">A QUICK CHECK-IN</div>
+<div class="h1" style="margin-top:11px;">How did we do?</div>
+<div class="body" style="margin-top:24px;">Hi {{client.firstName}},</div>
+<div class="body" style="margin-top:14px;">
+Now that {{transaction.closedPhrase}}, we'd appreciate a few minutes of your time. Thank you for trusting Coldwell Banker Horizon Realty and <strong>{{service.displayName}}</strong> with your {{transaction.noun}}.
+</div>
+<div class="body" style="margin-top:14px;">
+Your feedback matters to us. It helps us understand what we're doing well and where we can improve.
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="pad" style="padding-bottom:38px;">
+<table role="presentation" width="100%" bgcolor="#F8F6F1" style="border-left:3px solid #B8A46A;">
+<tr>
+<td style="padding:26px 28px 28px;">
+<div class="panel-label">{{survey.label}}</div>
+<div class="panel-title" style="margin-top:8px;">Share your experience</div>
+<div class="panel-copy" style="margin-top:7px;">Tell us what worked well and where we can do better.</div>
+<div style="margin-top:20px;"><a href="{{survey.url}}" class="button">Complete the survey</a></div>
+<div class="fine" style="margin-top:13px;">It should only take a few minutes.</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="pad" style="padding-top:28px;padding-bottom:31px;border-top:1px solid #D8DFEA;">
+<div class="body">Thank you for taking the time to share your feedback with us.</div>
+<div class="body" style="margin-top:10px;">Coldwell Banker Horizon Realty</div>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#001844" class="pad" style="padding-top:27px;padding-bottom:27px;">
+<div style="font-size:11px;line-height:18px;color:#FFFFFF;font-weight:600;">COLDWELL BANKER HORIZON REALTY</div>
+<div style="font-size:10px;line-height:17px;color:#C8D2E3;margin-top:3px;">1470 Harvey Ave #14, Kelowna, BC V1Y 9K8 · (250) 860-7500</div>
+<div style="font-size:10px;line-height:17px;color:#C8D2E3;margin-top:3px;">KELOWNAREALESTATE.COM</div>
+<div style="font-size:9px;line-height:14px;color:#8190AA;margin-top:16px;">Each office independently owned and operated.</div>
+</td>
+</tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>
