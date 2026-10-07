@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Review &amp; Win $100</title>
+<!--
+Design reference only.
+Subject: Review & Win $100
+agentOrTeam block renders only when googleReviewUrl exists.
+No agent email is shown.
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500;600&family=Playfair+Display:wght@500&display=swap');
+html,body{margin:0;padding:0;background:#F6F8FB}
+body{font-family:Roboto,Arial,Helvetica,sans-serif;color:#263142;-webkit-font-smoothing:antialiased}
+table{border-collapse:collapse;border-spacing:0}
+img{border:0;display:block}
+a{text-decoration:none}
+.shell{width:620px;max-width:620px;background:#fff}
+.pad{padding-left:48px;padding-right:48px}
+.kicker{font-size:10px;line-height:14px;font-weight:600;letter-spacing:.12em;color:#687386}
+.h1{font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:36px;line-height:38px;font-weight:700;letter-spacing:-.04em;color:#10151F}
+.body{font-size:15px;line-height:24px;color:#263142}
+.prize-number{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:48px;line-height:48px;font-weight:500;color:#012169}
+.prize-title{font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:17px;line-height:21px;font-weight:700;letter-spacing:-.02em;color:#10151F}
+.prize-copy{font-size:13px;line-height:20px;color:#687386}
+.number{width:52px;padding:31px 0;vertical-align:top;font-family:Montserrat,Arial,sans-serif;font-size:10px;line-height:16px;font-weight:700;letter-spacing:.1em;color:#B8A46A}
+.step{padding:29px 0 31px;vertical-align:top}
+.label{font-size:10px;line-height:14px;font-weight:600;letter-spacing:.12em;color:#8A94A6}
+.step-title{font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:18px;line-height:23px;font-weight:700;letter-spacing:-.02em;color:#10151F;margin-top:7px}
+.step-copy{font-size:13px;line-height:20px;color:#687386;margin-top:5px}
+.rule{height:1px;background:#E8EDF4;font-size:0;line-height:0}
+.button{display:inline-block;margin-top:16px;padding:13px 21px;border-radius:8px;background:#012169;color:#fff!important;font-size:13px;line-height:17px;font-weight:600}
+.secondary{background:#fff!important;color:#012169!important;border:1px solid #D8DFEA}
+.fine{font-size:11px;line-height:18px;color:#8A94A6}
+@media(max-width:660px){
+.shell{width:100%!important}
+.pad{padding-left:26px!important;padding-right:26px!important}
+.h1{font-size:31px!important;line-height:34px!important}
+.prize-number{font-size:42px!important}
+}
+</style>
+</head>
+<body>
+<div style="display:none;max-height:0;overflow:hidden;color:transparent;">
+Leave your Google reviews, confirm your entry, and you could win $100.
+</div>
+
+<table role="presentation" width="100%" bgcolor="#F6F8FB">
+<tr><td align="center" style="padding:32px 12px;">
+<table role="presentation" class="shell" width="620">
+
+<tr>
+<td bgcolor="#012169" class="pad" style="padding-top:23px;padding-bottom:23px;">
+<table role="presentation" width="100%">
+<tr>
+<td valign="middle">
+<img src="https://cdn.prod.website-files.com/651d8cc426674e7695b3aaf4/651d8cc426674e7695b3ab6a_Logo_600751_Horizon_Realty_HZ_STK_W_MO.webp" width="210" alt="Coldwell Banker Horizon Realty" style="width:210px;max-width:100%;height:auto;">
+</td>
+<td align="right" valign="middle" style="font-size:10px;line-height:14px;font-weight:600;letter-spacing:.12em;color:#DDE5F2;">CLIENT GIVEAWAY</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td height="3" bgcolor="#B8A46A"></td></tr>
+
+<tr>
+<td class="pad" style="padding-top:42px;padding-bottom:30px;">
+<div class="kicker">THANK YOU FOR TRUSTING US</div>
+<div class="h1" style="margin-top:11px;">Review &amp; win $100.</div>
+<div class="body" style="margin-top:23px;">Hi {{client.firstName}},</div>
+<div class="body" style="margin-top:14px;">
+Thanks again for choosing Coldwell Banker Horizon Realty{{#if agentOrTeam.displayName}} and working with <strong>{{agentOrTeam.displayName}}</strong>{{/if}}.
+</div>
+<div class="body" style="margin-top:14px;">
+Leave your Google review{{#if agentOrTeam.googleReviewUrl}}s{{/if}}, then confirm your entry below for a chance to win $100.
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="pad" style="padding-bottom:7px;">
+<table role="presentation" width="100%" bgcolor="#F8F6F1" style="border-left:3px solid #B8A46A;">
+<tr>
+<td width="110" style="padding:24px 24px;vertical-align:middle;">
+<div class="prize-number">$100</div>
+</td>
+<td style="padding:23px 25px 23px 0;vertical-align:middle;">
+<div class="prize-title">Take it, or give it.</div>
+<div class="prize-copy" style="margin-top:6px;">
+If your name is drawn, choose a $100 Visa gift card or a $100 donation to one of our featured local organizations.
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="pad" style="padding-top:15px;padding-bottom:10px;">
+<table role="presentation" width="100%">
+
+{{#if agentOrTeam.googleReviewUrl}}
+<tr>
+<td class="number">01</td>
+<td class="step">
+<div class="label">YOUR REALTOR®</div>
+<div class="step-title">{{agentOrTeam.displayName}}</div>
+<div class="step-copy">Share your experience working together.</div>
+<a class="button" href="{{agentOrTeam.googleReviewUrl}}">Review {{agentOrTeam.displayName}}</a>
+</td>
+</tr>
+<tr><td colspan="2" class="rule"></td></tr>
+{{/if}}
+
+<tr>
+<td class="number">{{brokerageStepNumber}}</td>
+<td class="step">
+<div class="label">OUR BROKERAGE</div>
+<div class="step-title">Coldwell Banker Horizon Realty</div>
+<div class="step-copy">Tell us how we did as a brokerage.</div>
+<a class="button secondary" href="{{campaign.brokerageReviewUrl}}">Review Horizon Realty</a>
+</td>
+</tr>
+
+<tr><td colspan="2" class="rule"></td></tr>
+
+<tr>
+<td class="number">{{entryStepNumber}}</td>
+<td class="step">
+<div class="label">YOUR ENTRY</div>
+<div class="step-title">Confirm your entry</div>
+<div class="step-copy">Finished your review{{#if agentOrTeam.googleReviewUrl}}s{{/if}}? Confirm your entry for this month's draw.</div>
+<a class="button" href="{{campaign.entryUrl}}">Confirm my entry</a>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="pad" style="padding-top:12px;padding-bottom:35px;">
+<div style="font-size:13px;line-height:21px;font-weight:600;color:#263142;">{{campaign.requirementCopy}}</div>
+<div class="fine" style="margin-top:8px;">This draw is limited to clients we served in {{campaign.clientMonth}}.</div>
+<div class="fine" style="margin-top:18px;">
+Need help?
+<a href="{{campaign.googleAccountHelpUrl}}" style="color:#012169;text-decoration:underline;">Create a Google account</a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="{{campaign.reviewHelpUrl}}" style="color:#012169;text-decoration:underline;">How to leave a review</a>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="pad" style="padding-top:28px;padding-bottom:31px;border-top:1px solid #D8DFEA;">
+<div class="body">Thank you again for choosing Coldwell Banker Horizon Realty. Good luck in the draw!</div>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#001844" class="pad" style="padding-top:27px;padding-bottom:27px;">
+<div style="font-size:11px;line-height:18px;color:#fff;font-weight:600;">COLDWELL BANKER HORIZON REALTY</div>
+<div style="font-size:10px;line-height:17px;color:#C8D2E3;margin-top:3px;">1470 Harvey Ave #14, Kelowna, BC V1Y 9K8 · (250) 860-7500</div>
+<div style="font-size:10px;line-height:17px;color:#C8D2E3;margin-top:3px;">KELOWNAREALESTATE.COM</div>
+<div style="font-size:9px;line-height:14px;color:#8190AA;margin-top:16px;">Each office independently owned and operated.</div>
+</td>
+</tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>
